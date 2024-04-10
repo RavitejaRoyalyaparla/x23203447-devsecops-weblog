@@ -5,3 +5,7 @@ __cache__
 __pycache__
 
 migration
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

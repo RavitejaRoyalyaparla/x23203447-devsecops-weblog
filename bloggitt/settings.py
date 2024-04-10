@@ -85,10 +85,10 @@ DATABASES = {
     
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'diarydb',
+        'NAME': 'weblog',
         'USER': 'postgres',
         'PASSWORD': 'password',
-        'HOST': 'x23220708-devsecop-diary.civwddw9gdry.eu-north-1.rds.amazonaws.com',
+        'HOST': 'x23203447-devsecops-articles-eb.civwddw9gdry.eu-north-1.rds.amazonaws.com',
     }
 }
 
@@ -117,7 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Asia/Calcutta'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
@@ -131,6 +131,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static') ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'

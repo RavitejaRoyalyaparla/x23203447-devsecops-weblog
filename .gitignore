@@ -1,0 +1,7 @@
+.venv
+.idea
+
+__cache__
+__pycache__
+
+migration

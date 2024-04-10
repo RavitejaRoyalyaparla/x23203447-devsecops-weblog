@@ -3,7 +3,7 @@
 
 __cache__
 __pycache__
-
+__pycache__/*
 migration
 # Elastic Beanstalk Files
 .elasticbeanstalk/*

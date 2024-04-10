@@ -5,6 +5,15 @@ __cache__
 __pycache__
 __pycache__/*
 migration
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc.so
+
+# Django migrations
+core/migrations/*
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml

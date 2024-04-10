@@ -18,16 +18,16 @@ body {
 body {
   width: 100%;
   font-family: Poppins, sans-serif;
-  background-color: #281d1b;
+  background-color: #ffffff;
 }
 
 a {
-  color: #28abb9;
+  color: #000000;
   text-decoration: none;
 }
 
 div.cred {
-  border: 0.01rem solid #4cf14c;
+  border: 0.01rem solid #000000;
   border-radius: 0.8rem;
   position: absolute;
   top: 50%;
@@ -43,7 +43,7 @@ div.cred h2 {
   font-weight: 600;
   margin-bottom: 2rem;
   text-align: center;
-  color: #2d6187;
+  color: #000000;
 }
 
 div.input {
@@ -73,7 +73,7 @@ div.input::before {
   bottom: -0.01rem;
   width: 0;
   height: 0.05rem;
-  background-color: #28abb9;
+  background-color: #ccd7d8;
   left: 0;
   transition: width 0.5s ease;
 }
@@ -89,7 +89,7 @@ a.button {
   border-radius: 0.8rem;
   border: none;
   background-color: #2d6187;
-  color: #ffffff;
+  color: #000000;
   cursor: pointer;
   font-family: inherit;
   font-size: 1.4rem;
@@ -110,7 +110,7 @@ a.button:active {
 .formfooter {
   margin-top: 2rem;
   font-size: 1.2rem;
-  color: #333333;
+  color: #030303;
 }
 
 .formfooter p:last-child {
@@ -118,7 +118,7 @@ a.button:active {
 }
 
 .formfooter p a {
-  color: #28abb9;
+  color: #96d9e0;
   text-decoration: none;
 }
 
@@ -186,7 +186,7 @@ header a {
 
 header h1 a {
   font-size: 2.5rem;
-  color: #2d6187;
+  color: #000000;
 }
 
 header nav ul {
@@ -198,7 +198,7 @@ header nav ul {
 
 header nav ul li a {
   font-size: 1.7rem;
-  color: #28abb9;
+  color: #000000;
 }
 
 @media (max-width: 1025px) {
@@ -276,7 +276,7 @@ header nav ul li a {
 .blog .author {
   margin: 1.5rem 0;
   font-size: 1.3rem;
-  color: #b144cc;
+  color: #974545;
   font-weight: 500;
 }
 
@@ -411,7 +411,7 @@ a.button-green {
 .profile-container {
   padding: 3rem 3rem;
   border-radius: 2rem;
-  background-color: #ffffff;
+  background-color: #1c1c1c;
   width: 50%;
   margin: 5rem auto;
 }
@@ -444,7 +444,7 @@ a.button-green {
 
 .profile-update {
   margin: 0.5rem auto;
-  color: #333333;
+  color: #000000;
   font-size: 1.3rem;
   border: 0.01rem solid #4cf14c;
   border-radius: 0.8rem;

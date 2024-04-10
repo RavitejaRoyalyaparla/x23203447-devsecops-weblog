@@ -25,7 +25,7 @@ SECRET_KEY = '&w!-%qsbcb_7kdo^)roirk)evgkhu1vn(e8tztam-*+n1b#)=2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -85,7 +85,7 @@ DATABASES = {
     
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'weblog',
+        'NAME': 'weblogdb',
         'USER': 'postgres',
         'PASSWORD': 'password',
         'HOST': 'x23203447-devsecops-articles-eb.civwddw9gdry.eu-north-1.rds.amazonaws.com',
@@ -131,7 +131,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static') ]
+STATICFILES_DIRS =  [
+    os.path.join(BASE_DIR, 'static')
+]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 

@@ -9,7 +9,6 @@
   integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
   <a href="{% url 'home' %}" class="btn btn-primary">Back to Home</a>
 <article class="blog">
-  <a href="{% url 'home' %}" class="button">Back to Home</a>
   <p class="author">{{ post.author }} | {{ post.created_on }}</p>
   {% for tag in post.tags.all %}
   <a href="{% url 'posts_by_tag' tag.slug %}">

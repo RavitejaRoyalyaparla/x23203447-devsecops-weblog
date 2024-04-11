@@ -45,7 +45,7 @@ class Post(models.Model):
     read_count = models.IntegerField(default=0, editable=False)
     read_time = models.IntegerField(default=0, editable=False)
     likes = models.ManyToManyField(User, blank=True, related_name='post_likes')
-    image = models.ImageField(null=True, blank=True, upload_to='images/')
+    image = models.ImageField(null=True, blank=True, upload_to='images')
     tags = TaggableManager(blank=True)
 
     class Meta:
@@ -89,7 +89,7 @@ class FavouritePost(models.Model):
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     
-    profile_image = models.ImageField(default='default.jpeg', upload_to ='profile_pics', null=True, blank=True)
+    profile_image = models.ImageField(default='default.jpeg', upload_to ='images', null=True, blank=True)
 
     def __str__(self):
         return '%s %s' % (self.user.first_name, self.user.last_name)

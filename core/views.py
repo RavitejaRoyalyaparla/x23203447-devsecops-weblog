@@ -261,30 +261,28 @@ class ProfileView(LoginRequiredMixin, TemplateView):
     template_name = 'profile.html'
 
 class ProfileUpdateView(LoginRequiredMixin, TemplateView):
-    user_form = UserForm()
-    profile_form = ProfileForm()
     template_name = 'profile-update.html'
 
-    def post(self, request):
-
+    def post(self, request, *args, **kwargs):
         post_data = request.POST or None
-        file_data = request.FILES or None
+        file_data = request.FILES or None  # Ensure this is included
 
         user_form = UserForm(post_data, instance=request.user)
-        profile_form = ProfileForm(post_data, file_data, instance=request.user.profile)
+        profile_form = ProfileForm(post_data, file_data, instance=request.user.profile)  # Include file_data here
 
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
-            messages.error(request, 'Your profile is updated successfully!')
-            return HttpResponseRedirect(reverse_lazy('profile'))
+            messages.success(request, 'Your profile is updated successfully!')  # Changed from messages.error to messages.success for clarity
+            return HttpResponseRedirect(reverse_lazy('profile'))  # Redirect to the profile view or another appropriate view
 
         context = self.get_context_data(
-                                        user_form=user_form,
-                                        profile_form=profile_form
-                                    )
+            user_form=user_form,
+            profile_form=profile_form
+        )
 
-        return self.render_to_response(context)     
+        return self.render_to_response(context)
+    
 
     def get(self, request, *args, **kwargs):
         return self.post(request, *args, **kwargs)
